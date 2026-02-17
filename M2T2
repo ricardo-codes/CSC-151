@@ -1,0 +1,22 @@
+int main() {
+    // 1. Declare variables
+    double mealPrice = 5.99;
+    double taxPercent = 0.08;
+    double taxAmount;
+    double total;
+
+    // 2. Calculate tax amount
+    taxAmount = mealPrice * taxPercent;
+
+    // 3. Calculate total
+    total = mealPrice + taxAmount;
+
+    // 4. Print results
+    cout << fixed << setprecision(2); // ensures 2 decimal places
+    cout << "Receipt:" << endl;
+    cout << "Meal price: $" << mealPrice << endl;
+    cout << "Tax: $" << taxAmount << endl;
+    cout << "Total: $" << total << endl;
+
+    return 0;
+}
