@@ -1,0 +1,55 @@
+// CSC 134
+// M3T3 - Random Numbers (Craps)
+// Ricardo
+// March 3rd, 2026
+
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+
+    cout << "Let's play Craps!" << endl;
+
+    // Seed the random number generator
+    srand(time(0));
+
+    const int MAX = 6; // dice sides
+
+    int roll1, roll2, total;
+
+    // Roll first die
+    roll1 = (rand() % MAX) + 1;
+    cout << "First roll: " << roll1 << endl;
+
+    // Roll second die
+    roll2 = (rand() % MAX) + 1;
+    cout << "Second roll: " << roll2 << endl;
+
+    // Add dice
+    total = roll1 + roll2;
+    cout << "Total: " << total << endl;
+
+    // Craps rules for first roll
+    if (total == 7) {
+        cout << "Lucky seven! You win!" << endl;
+    }
+    else if (total == 11) {
+        cout << "Eleven! You win!" << endl;
+    }
+    else if (total == 2) {
+        cout << "Snake eyes! You lose." << endl;
+    }
+    else if (total == 3) {
+        cout << "Three! You lose." << endl;
+    }
+    else if (total == 12) {
+        cout << "Boxcars! You lose." << endl;
+    }
+    else {
+        cout << "Your point is " << total << ". Point system will be added later." << endl;
+    }
+
+    return 0;
+}
